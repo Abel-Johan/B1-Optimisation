@@ -75,7 +75,7 @@ def gauss_newton_method(start, n_iterations):
 
 
 # Parameters for gradient descent
-start_point = (-1.2, 1.0)
+start_point = (-np.random.uniform(-2, 2), -np.random.uniform(-2, 2))
 learning_rate = 0.001
 iterations = 20000
 

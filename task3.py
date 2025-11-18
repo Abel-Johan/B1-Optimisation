@@ -37,16 +37,17 @@ path3 = nelder_mead(start_point3, tolerance, iterations)
 # NELDER-MEAD SIMPLEX END
 
 # Plot the paths on the contour plots
-ax.plot(path1[:, 0], path1[:, 1], 'r.-', label='Nelder-Mead Path 1')
-ax.plot(path2[:, 0], path2[:, 1], 'c.-', label='Nelder-Mead Path 2')
-ax.plot(path3[:, 0], path3[:, 1], 'm.-', label='Nelder-Mead Path 3')
-ax.plot(start_point1[0], start_point1[1], 'bo', label='Start Point 1')  # Starting point in blue
-ax.plot(start_point2[0], start_point2[1], 'bo', label='Start Point 2')  # Starting point in blue
-ax.plot(start_point3[0], start_point3[1], 'bo', label='Start Point 3')  # Starting point in blue
-ax.plot(1, 1, 'go', label = "Analytical Minimum Point")  # Analytical minimum point in green dot
-ax.plot(path1[-1,0], path1[-1,1], 'gx', label = "End Point 1")  # Ending point in green cross
-ax.plot(path2[-1,0], path2[-1,1], 'gx', label = "End Point 2")  # Ending point in green cross
-ax.plot(path3[-1,0], path3[-1,1], 'gx', label = "End Point 3")  # Ending point in green cross
+ax.plot(path1[:,0], path1[:,1], 'r.-', label='Newton Path 1')  # Plot the path in red
+ax.plot(path2[:,0], path2[:,1], 'c.-', label='Newton Path 2')  # Plot the path in cyan
+ax.plot(path3[:,0], path3[:,1], 'm.-', label='Newton Path 3')  # Plot the path in magenta
+ax.plot(path1[-1,0], path1[-1,1], 'rx', label='End Point 1')  # Ending point in red cross
+ax.plot(path2[-1,0], path2[-1,1], 'cx', label='End Point 2')  # Ending point in cyan cross
+ax.plot(path3[-1,0], path3[-1,1], 'mx', label='End Point 3')  # Ending point in magenta cross
+ax.plot(start_point1[0], start_point1[1], 'ro', label='Start Point 1')  # Starting point in red
+ax.plot(start_point2[0], start_point2[1], 'co', label='Start Point 2')  # Starting point in cyan
+ax.plot(start_point3[0], start_point3[1], 'mo', label='Start Point 3')  # Starting point in magenta
+
+ax.plot(1, 1, 'go', label='Analytical Minimum Point')  # Analytical minimum point in green dot
 ax.legend()
 
 plt.show()
